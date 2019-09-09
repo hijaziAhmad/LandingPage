@@ -6,23 +6,18 @@ global
 1. adcontainer
 2. carousel
 3. contact
-4. container
-5. FAQ
-6. footer
-7. header
-8. masalah
+4. FAQ
+5. footer
+6. header
+7. loginform
+8. masalah & ubat
 9. perkhidmatan
-10. subscribe
-11. ubat
+
 
 
 */
 
 /*-----------------------GLOBAL------------------------------*/
-* {
-	font-family: Arial, Helvetica, sans-serif;
-	color: #3C3C3C;
-}
 
 a {
 	/*remove anchor tag preset style*/
@@ -30,12 +25,11 @@ a {
 	text-align: center;
 }
 
-body,
 html {
-	margin: 0;
-	padding: 0;
-	text-align: justify;
+	scroll-behavior: smooth;
 }
+
+
 
 button,
 button:active,
@@ -46,137 +40,271 @@ button:focus {
 }
 
 .btn {
-	background-color: red;
-	color: white;
+	display: block;
+	background-color: #E22;
+	color: #fff;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 10px 40px;
+	width: 90%;
+	max-width: 400px;
 	border-radius: 6px;
 	text-align: center;
-	align-content: center;
 }
 
-/*-----------------------1. AD CONTAINER------------------------------*/
-.ads_containers{
-	height: 192px;
+/*-----------------------1. adcontainer------------------------------*/
+.adcontainer {
+	font-family: helvetica;
+	height: 200px;
 	width: 100%;
-	background: #F5E6B3;
-}
-.ads_containers h3{
-	color:#3C3C3C;
-	
-}
-.ads_containers p{
-	color:#767676;
-	
-}
-.ads_containers-textarea{
-	right:20%;
-	text-align: left;
-	margin-left:40%;
-	padding-top:5%;
-}
-.ads_containers .ads_picture{
-	background-image: url('../img/mon.png');
-	background-repeat: no-repeat;
-	background-size: contain;
-	position: absolute;
-	height: 100%;
-	width:356px;
+	background-color: #edb;
+	padding: 60px;
 }
 
-.ads_picture p{
-	margin: 20px;
-	color:white;
-	font-weight:600;
-	font-size: 4em;
-	text-align: center;
-	position:relative;
+/*-----------------------2. carousel------------------------------*/
+@keyframes slidy {
+	0% {
+		left: 0%;
 	}
-.ads_picture span{
+
+	12.5% {
+		left: -100%;
+	}
+
+	25% {
+		left: -100%;
+	}
+
+	37.5% {
+		left: -200%;
+	}
+
+	50% {
+		left: -200%;
+	}
+
+	62.5% {
+		left: -300%;
+	}
+
+	75% {
+		left: -300%;
+	}
+
+	87.5% {
+		left: -400%;
+	}
+
+	100% {
+		left: -400%;
+	}
+}
+
+div#carousel-gallery {
+	width: 100%;
+	overflow: hidden;
+
+}
+
+figure {
+	margin: 0;
+	font-family: helvetica;
+}
+
+figure.slider {
+	position: relative;
+	width: 500%;
+	font-size: 0;
+	animation: 20s slidy infinite;
+	/*carousel speed*/
+}
+
+/*-- edit height of the carousel here--*/
+figure.slider figure {
+
+	width: 20%;
+	height: 480px;
+	display: inline-block;
+	position: inherit;
+}
+
+/*-- text setting for the carosel --*/
+.slider figure .title {
+	position: absolute;
+	top: 200px;
+	color: #fff;
+	width: 70%;
+	font-size: 50px;
+	padding: 50px;
+	text-shadow: 0 5px 6px #000;
+}
+
+.slider figure .sub-title {
+	position: absolute;
+	top: 280px;
+	color: #fff;
+	width: 50%;
 	font-size: 20px;
-	color: white;
-	position: absolute;
+	padding: 50px;
+	text-shadow: 0 5px 6px #000;
 }
-/*-----------------------2. CAROUSEL------------------------------*/
-.carousel {
-	background-image: url(../img/AdobeStock_223724093.png);
-	background-size: cover;
-	height: 500px;
+
+.slider figure .title1 {
+	position: absolute;
+	top: 90px;
+	color: #fff;
+	width: 70%;
+	font-size: 50px;
+	padding: 50px;
+	text-shadow: 0 5px 6px #000;
+}
+
+.slider figure .sub-title1 {
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+	width: 50%;
+	font-size: 20px;
+	padding: 50px;
+	text-shadow: 0 5px 6px #000;
+}
+
+/*--- put image here ---*/
+.slider figure:nth-child(1) {
+	background-image: url('../img/carousel%20cover%201%20bm.png');
 	background-position: center;
+	background-size: cover;
+
 }
 
-.carousel h1 {
-	color: white;
-	position: absolute;
-	bottom: 45%;
-	padding-left: 200px;
-	font-size: 3em;
-	width: 50%;
-	text-align: left;
-	text-shadow: 0px 3px 6px #000000;
+.slider figure:nth-child(2) {
+	background-image: url('../img/carousel%20cover%202%20bm.png');
+	background-position: center;
+	background-size: cover;
 }
 
-.carousel h2 {
-	color: white;
-	position: absolute;
-	bottom: 30%;
-	padding-left: 200px;
-	font-size: 1.4em;
-	width: 50%;
-	text-align: left;
-	text-shadow: 0px 3px 6px #000000;
+.slider figure:nth-child(3) {
+	background-image: url('../img/carousel%20cover%203%20bm.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.slider figure:nth-child(4) {
+	background-image: url('../img/carousel%20cover%204%20bm.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.slider figure:nth-child(5) {
+	background-image: url('../img/carousel%20cover%201%20bm.png');
+	background-position: center;
+	background-size: cover;
+}
+
+@media (max-width:900) {
+	.slider figure .title {
+		position: none;
+		top: 10px;
+		color: #fff;
+		width: 70%;
+		font-size: 50px;
+		padding: 50px;
+		text-shadow: 0 5px 6px #000;
+	}
+
+	.slider figure .sub-title {
+		position: none;
+		bottom: 10%;
+		color: #fff;
+		width: 50%;
+		font-size: 20px;
+		padding: 50px;
+		text-shadow: 0 5px 6px #000;
+	}
+
+	.slider figure .title1 {
+		position: absolute;
+		top: 90px;
+		color: #fff;
+		width: 70%;
+		font-size: 50px;
+		padding: 50px;
+		text-shadow: 0 5px 6px #000;
+	}
+
+	.slider figure .sub-title1 {
+		position: absolute;
+		bottom: 0;
+		color: #fff;
+		width: 50%;
+		font-size: 20px;
+		padding: 50px;
+		text-shadow: 0 5px 6px #000;
+	}
 }
 
 /*-----------------------3. CONTACT------------------------------*/
-.contact {
-	background-color: #EE7129;
-	color: white;
-	padding: 20px 10px 20px 10px;
+.b-c-container {
+	display: inline-block;
+	text-align: left;
+	padding-right: 10px;
 }
 
-.contact-details {
+.b-desc {
+	padding: 0;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.b-emel {
+	padding-left: 40px;
+	border-left: 1px #fff solid;
+}
+
+.b-icon {
+	width: 25px;
+	height: auto;
+	fill: #fff;
+	margin-bottom: 20px;
+	margin-right: 10px;
+}
+
+.b-title {
+	font-weight: 600;
+	display: block;
+	padding: 0;
+	margin-bottom: 0;
+}
+
+.b-textarea,
+.b-icon {
+	display: inline-block;
+}
+
+.contact-banner {
+	background-color: #e72;
+	padding: 20px;
+	padding-left: 10%;
 	font-size: 14px;
-	color: white;
-}
-
-.contact-email {
-	border-left: 1px white solid;
-	display: inline-block;
-	padding-left: 5%;
+	color: #fff;
+	font-family: helvetica;
+	font-size: 14px;
 
 }
-
-.contact-logo {
-	position: absolute;
-	left: 320px;
-	top: 70px;
-	height: 20px;
-	width: auto;
-}
-
-.contact-phone {
-	margin-left: 10%;
-	margin-right: 5%;
-	display: inline-block;
-}
-
-.contact-title {
-	font-size: 16px;
-	color: white;
-}
-
-/*-----------------------4. CONTAINER------------------------------*/
-.container h2 {
-	text-align: center;
-	margin-top: 35px;
-}
-
-
 
 /*-----------------------5. FAQ------------------------------*/
+.faq-container a {
+	color: #444;
+}
+
+.faq-container h2 {
+	text-align: center;
+	margin-top: 80px;
+}
 
 .faq-answers {
 	font-size: 0.83em;
-	color: #3C3C3C;
+	color: #444;
 	padding-top: 0px;
 	margin-top: 0px;
 	margin-bottom: 3%;
@@ -184,120 +312,446 @@ button:focus {
 
 .faq-container {
 	margin-bottom: 7%;
+	font-family: helvetica;
 }
 
 .faq-questions {
 	font-size: 1em;
-	color: rgba(238, 113, 41, 1);
+	color: #E72;
 	font-weight: bolder;
 	margin-bottom: 0px;
 }
 
-/*-----------------------6. FOOTER------------------------------*/
+/*-----------------------5. FOOTER------------------------------*/
 footer {
+	background-color: #E72;
+	font-size: 12px;
 	float: clear;
-	background-color: #EE7129;
 	padding: 2%;
 	text-align: right;
 }
 
 footer a {
+	color: #fff;
 	display: inline-block;
 	margin-left: 2%;
-	color: white;
 }
 
-/*-----------------------7. HEADER------------------------------*/
-.left {
+@media (max-width:750px) {
+	footer a {
+		color: #fff;
+		display: block;
+		margin: 15px 10px;
+		margin-left: 2%;
+		text-align: right;
+	}
+}
+
+/*-----------------------6. header------------------------------*/
+
+.desktop-links {
+	list-style: none;
+	display: inline-block;
+	padding: 5px;
+}
+
+.desktop-links a {
+	margin: 0 10px;
+	transition: all 0.3s ease 0s;
+}
+
+.desktop-links a:hover {
+	color: #E22;
+}
+
+.logo-container .doc-logo {
+	height: 44px;
+	width: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: auto;
+	padding-right: 10px;
+}
+
+.drop-downlist a {
+	display: block;
+	padding: 10px 15px;
+	background-color: #E22;
+	color: #fff;
+	text-decoration: none;
+	width: 310px;
+	border: 1px #fff solid;
+
+}
+
+.flag {
+	height: 11px;
+}
+
+header {
+	font-family: helvetica;
+	font-size: 14px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 10px 10px;
+	height: 50px;
+}
+
+header a {
+	text-decoration: none;
+	color: #444;
+}
+
+.header-btn {
+	padding: 10px 30px;
+	background-color: #E22;
+	border-radius: 5px;
+	color: #fff;
+	margin-left: 20px;
+	border: #E22 1px solid;
+	transition: all 0.3s ease 0s;
+}
+
+.header-btn:hover {
+	border: #E22 1px solid;
+	opacity: 0.8;
+	background-color: #fff;
+	color: #E22;
+}
+
+.header-phone {
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+}
+
+.header-phone img {
+	height: 15px;
+}
+
+
+.logo-container {
+	display: flex;
+	margin-right: auto;
+
+}
+
+.logo-header {
+	height: 70PX;
+	width: auto;
+	margin-right: auto;
+}
+
+.logo-container svg {
+	width: 50px;
+	margin-right: 10px
+}
+
+.mobile-links {
+	border: 1px solid #E22;
+	display: none;
+}
+
+.mobile-links .drop-downlist {
+	display: none;
+}
+
+.mobile-links:hover .drop-downlist {
+	display: list-item;
+}
+
+@media (max-width:800px) {
+
+	/*set to 800 because the links are overflow*/
+	.desktop-links,
+	.btn,
+	.header-phone {
+		display: none;
+	}
+
+	.logo-header {
+		margin-left: auto;
+		height: 50px;
+	}
+
+	.mobile-links {
+		display: block;
+		float: right;
+	}
+
+	header {
+		display: flex;
+	}
+}
+
+/*end header*/
+/*-----------------------7. Login Form.------------------------------*/
+
+input[type=text],
+input[type=password] {
+	border: 1px solid #eee;
+	box-sizing: border-box;
+	border-radius: 5px;
+	display: inline-block;
+	margin: 0;
+	padding: 15px 15px;
+	width: 100%;
+}
+
+.login-form .login-title {
+	font-weight: 700;
+	font-size: 24px;
+}
+
+/*.login-form{
+			padding:20px
+		}*/
+.login-form {
+	font-family: helvetica;
 	padding: 20px;
-	text-align: left;
-	padding-left: 50px;
+	max-width: 700px;
+	margin-left: auto;
 }
 
-.right {
-	padding: 20px;
-	text-align: right;
-	padding-right: 50px;
-	margin-left: 2%;
+.login-form form {
+	font-size: 14px;
 }
 
-/*-----------------------8. MASALAH------------------------------*/
-
-
-.masalah-container .row i {
-	background-color: orangered;
-	height: 40px;
-	font-size: 40px;
-	border-radius: 4px;
-	padding;
-	5px;
+.login-img img {
+	display: block;
+	height: 470px;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
 }
 
-.masalah-container .masalah-title {
-	font-weight: bolder;
-	font-size: 1em;
-	margin-bottom: 5px;
-	padding-top: 0;
-	margin-top: 0;
+.login-wrapper {
+	background-color: #eee;
+	height: auto;
 }
 
-.masalah-list {
-	padding-top: 5px;
-	margin-top: 0;
+.login-btn {
+	background-color: #e22;
+	border-radius: 5px;
+	color: #fff;
+	margin: 8px 0;
+	padding: 14px 20px;
+	width: 100%;
 }
 
-/*-----------------------9. PERKHIDMATAN------------------------------*/
-.perkhidmatan-container {
-	min-height: 350px;
-	border: 1px #E8E5E3 solid;
-	margin: 50px;
-	padding: 0px;
+.login-form .forgotp {
+	float: right;
+	font-size: 12px;
+	margin: 15px;
+
 }
 
-.perkhidmatan-container .btn {
+@media (max-width:576px) {
+	.login-img img {
+		display: none;
+	}
+}
+
+/*checkbox*/
+input[type=checkbox].css-checkbox {
 	position: absolute;
-	bottom: 5%;
+	z-index: -1000;
+	left: -1000px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
 }
 
-.perkhidmatan-container .text-area {
-	padding: 10px;
-	font-size: 0.8em;
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left: 22px;
+	height: auto;
+	display: inline-block;
+	line-height: 17px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	font-size: 12px;
+	vertical-align: middle;
+	cursor: pointer;
+	margin: 15px;
+
 }
 
-/*-----------------------10. SUBSCRIBE------------------------------*/
-/*-----------------------11. UBAT------------------------------*/
-.price {
-	/*cant align this*/
-	
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0 -17px;
+}
+
+label.css-label {
+	background-image: url(../img/csscheckbox_red.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.login-form img {
+	margin-top: 15px;
+}
+
+.logo-login {
+	width: 60px;
+
+}
+
+/*--end  checkbox--*/
+/*-----------------------8. masalah & ubat------------------------------*/
+
+/*icon container*/
+.m-icon {
+	align-content: center;
+	background-color: #e72;
+	border-radius: 5px;
+	display: flex;
+	height: 50px;
+	width: 50px;
+}
+
+.m-icon .diarhea {
+	align-content: center;
+	margin: 6px;
+	width: 50px;
+}
+
+.m-icon svg {
+	margin: 6px;
+	width: 40px;
+}
+
+/*icon-text wrapper*/
+.m-icon-text {
+	display: flex;
+	margin: 10% 2%;
+}
+
+.m-textarea {
+	overflow: auto;
+	padding-left: 10px;
+}
+
+.masalah-container {
+	font-family: helvetica;
+	font-size: 14px;
+	margin-top: 80px;
+}
+
+.masalah-desc {
+	margin: 2px;
+	padding: 0;
+}
+
+.masalah-title {
+	font-weight: 600;
+	margin: 0;
+}
+
+.mu-btn {
+	background-color: #e22;
+	border-radius: 5px;
+	color: #fff;
+	padding: 10px 15px;
+	text-decoration: none;
+}
+
+/*ubat*/
+.medicine-disclaimer {
+	font-size: 13px;
 	text-align: center;
-	font: 1em Arial, Helvetica, sans-serif;
-	font-weight: 900;
-	color: #ed1c23;
 }
-
-#ubat {
-	border-left: 1px #E8E5E3 solid;
-}
-
-
 
 .ubat-container {
-	border: 1px #E8E5E3 solid;
-	/*cant set margin */
-	
+	border-left: 1px #eee solid;
+	font-family: helvetica;
+	font-size: 14px;
+	margin-top: 80px;
 }
 
-.ubat-container img{
-	height: 100px;
-	width: auto;
-	margin: 20px;
-}
-.ubat-wrapper {
+.ubat-list {
 	text-align: center;
-	padding-left: 10px;
-	margin: auto;
 }
 
-.ubat-wrapper p {
-	text-align: left;
+.ubat-picture img {
+	height: auto;
+	margin: auto;
+	width: 100px;
+}
+
+.ubat-price {
+	color: #e22;
+	font-weight: 900;
+}
+
+.ubat-product {
+	border: 1px #eee solid;
+	margin: auto;
+	margin-bottom: 10px;
+	padding: 10px;
+	text-align: center;
+}
+
+.ubat-textarea {
+	margin: 10px 0;
+}
+
+@media(max-width: 768px) {
+	.ubat-container {
+		border: none;
+	}
+}
+
+/*-----------------------9. Kesihatan.------------------------------*/
+
+.svc {
+	font-family: helvetica;
+	font-size: 14px;
+	margin-bottom: 60px;
+}
+
+.svc h2 {
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 24px;
+	margin-top: 80px;
+}
+
+.svc-btn {
+	padding: 10px 15px;
+	background-color: #e22;
+	color: #fff;
+	margin-bottom: auto;
+	border-radius: 5px;
+}
+
+.svc-desc {
+	margin-bottom: 40px;
+}
+
+.svc-pic-cont {
+	padding: 0 25px 15px;
+}
+
+.svc-title {
+	font-weight: 700;
+}
+
+.svc-wrapper {
+	margin: 5px auto;
+	width: 80%;
+	border: 1px #ccc solid;
+	min-height: 380px;
+
+}
+
+.svc-wrapper img {
+	width: 100%;
 }
