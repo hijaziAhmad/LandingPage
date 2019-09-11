@@ -225,7 +225,7 @@ header a {
 
 
 .card-part-1 {
-  align-items: center;	
+  align-items: center center;	
   animation: opaqTransition 21s  infinite;
   background-image: url(../img/BM%20Manfaat-Great-Eastern-Takaful-Main-Slide-DoctorOnCall.png);
   background-position:bottom left;
@@ -323,7 +323,7 @@ header a {
 	display: flex;
 	font-family: helvetica;
 	justify-content: flex-start;
-	margin:auto;
+	margin:0;
 	padding: 1% 0  1% 20%;
 	}
 .cont-banner-wrapper {
