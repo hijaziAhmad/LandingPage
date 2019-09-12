@@ -1,4 +1,3 @@
-
 /*-----------------------directory------------------------------
 --v1.1--
 
@@ -22,9 +21,15 @@ a {
 	text-align: center;
 }
 
-html {
+html,
+body {
 	scroll-behavior: smooth;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	/*BEWARE*/
 }
+
 button,
 button:active,
 button:focus {
@@ -32,6 +37,8 @@ button:focus {
 	border: none;
 	box-shadow: none;
 }
+
+
 /*-----------------------1. header------------------------------*/
 
 .desktop-links {
@@ -51,20 +58,22 @@ button:focus {
 
 .drop-downlist {
 	box-shadow: 0 5px 6px #333;
-	display: none;	
+	display: none;
+	width: 90%;
 }
 
 .drop-downlist a {
 	background-color: #E72;
-	color: #fff;	
+	border: 1px solid white;
+	color: #fff;
+	text-align: right;
 	display: block;
-	font-size: 24px;
-	font-weight: 600;
-	padding: 50px 90px;	
+	padding: 5%;
 	text-decoration: none;
-	z-index: 999;	
+	z-index: 999;
 }
-.drop-downlist a:hover{
+
+.drop-downlist a:hover {
 	background-color: #fff;
 	color: #E72;
 }
@@ -79,22 +88,24 @@ header {
 	font-family: helvetica;
 	font-size: 14px;
 	height: 50px;
-	justify-content: flex-end;
 	padding: 10px 10px;
-	
+	justify-content: center;
+
 }
+
 header a {
 	color: #444;
-	text-decoration: none;	
+	text-decoration: none;
 }
 
 .header-btn {
 	background-color: #E22;
-	border: #E22 1px solid;	
+	border: #E22 1px solid;
 	border-radius: 5px;
 	color: #fff;
 	margin-left: 20px;
 	padding: 10px 30px;
+	display: inline-block;
 	transition: all 0.3s ease 0s;
 }
 
@@ -106,9 +117,9 @@ header a {
 }
 
 .header-phone {
-	align-items: center;	
+	align-items: center;
 	display: flex;
-	margin-left: auto;	
+	margin-left: auto;
 }
 
 .header-phone svg {
@@ -123,14 +134,13 @@ header a {
 
 .logo-container .doc-logo {
 	height: 44px;
-	margin:auto 0 auto auto;
+	margin: auto 0 auto auto;
 	padding-right: 10px;
-	width: auto;	
+	width: auto;
 }
 
 .logo-container svg {
-	margin-right: 10px
-	width: 50px;
+	margin-right: 10px width: 50px;
 }
 
 .logo-header {
@@ -139,7 +149,7 @@ header a {
 	width: auto;
 }
 
-.mobile-links {	
+.mobile-links {
 	border-radius: 5px;
 	display: none;
 }
@@ -147,40 +157,47 @@ header a {
 .mobile-links:hover .drop-downlist {
 	display: block;
 	position: absolute;
-	right:20px;
+	right: 20px;
 	z-index: 999;
 }
-@media (max-width:1200px){
-	.desktop-links a{
-		padding: 0;
+
+@media (max-width:1200px) {
+	.desktop-links a {
+		margin: 0;
 	}
-	.logo-container{
-		font-size:10px;
+
+	.logo-container {
+		font-size: 10px;
 	}
+
 }
+
 @media (max-width:768px) {
 	header {
 		display: flex;
 	}
+
 	.desktop-links,
 	.btn,
 	.header-phone {
 		display: none;
 	}
 
-	.logo-header {		
+	.logo-header {
 		height: 50px;
 		margin-left: auto;
 	}
+
 	.mobile-links {
 		display: block;
 		float: right;
-	}	
+	}
+
 }
 
 /*end header*/
 /*-----------------------2. adcontainer------------------------------*/
-.adcontainer {	
+.adcontainer {
 	background-color: #edb;
 	font-family: helvetica;
 	height: 200px;
@@ -189,125 +206,245 @@ header a {
 }
 
 /*-----------------------3. carousel------------------------------*/
-/*-------------https://codepen.io/Flat-Pixels/pen/qQParK----------*/
-.carousel-textarea {
-	margin: 0 20px;
-	padding: 0;
-	text-align: left;
-	text-shadow: 0 5px 6px #444;
-	width: 50%;
-}
-
-.carousel-textarea .carousel-title {
-	color: #fff;
+/* -------------------------------------------------------- slider */
+.slider {
 	display: block;
-	font-size: 45px;
-	font-weight: 700;
-	padding: 0;
-}
-
-.carousel-textarea .carousel-desc {
-	color: #fff;
-	display: block;
-	font-size: 24px;
-	padding: 0;
-}
-
-.carousel-wrapper {
-	font-family: helvetica;
-	height: 498px;
-	margin: 0 auto;
+	height: 450px;
 	overflow: hidden;
 	position: relative;
-	text-align: center;
-	width: 1280px;	
+
+}
+
+/* -------------------------------------------------------- slide */
+.slider > ul {
+	height: 100%;
+	z-index: 100;
+
+}
+
+.slider > ul > li {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transition: all 2000ms ease;
+	width: 100%;
+	z-index: 1;
+}
+
+.slider > #input-slide-0:checked ~ ul > li.slide-0,
+.slider > #input-slide-1:checked ~ ul > li.slide-1,
+.slider > #input-slide-2:checked ~ ul > li.slide-2,
+.slider > #input-slide-3:checked ~ ul > li.slide-3 {
+	opacity: 1;
+	z-index: 2;
 }
 
 
-.card-part-1 {
-  align-items: center center;	
-  animation: opaqTransition 21s  infinite;
-  background-image: url(../img/BM%20Manfaat-Great-Eastern-Takaful-Main-Slide-DoctorOnCall.png);
-  background-position:bottom left;
-  background-size:cover;
-  display: flex;
-  height: 100%;  
-  position: absolute;
-  transform: translateX( 1280px );
-  width: 100%;
-  z-index: 7;
+/* -------------------------------------------------------- description */
+.slider > .slide-description {
+	color: #fff;
+	font-family: helvetica;
+	position: absolute;
+	right: 70%;
+	text-shadow: 0 5px 6px #333;
+	top: calc(35% - 3vw);
+	width: 50%;
+	z-index: 200;
 }
 
-
-.card-part-1.card-part-2 {
-	animation-delay: 5s;
-	background-image: url(../img/BM%20i-GR8%20HARAPAN%20Slide%20Two%20DoctorOnCall.png);
-	z-index: 6;
+.slider > .slide-description > label {
+	position: absolute;
+	transition: all 0.75s ease;
+	visibility: hidden;
+	width: 80%;
 }
 
-.card-part-1.card-part-3 {
-  animation-delay: 10s;
-  background-image: url(../img/BM%20i-GREAT%20HARAPANCI10%20Slide%20Three%20DoctorOnCall.png);
-  z-index: 5;
+.slider > #input-slide-0:checked ~ .slide-description > .slide-0,
+.slider > #input-slide-1:checked ~ .slide-description > .slide-1,
+.slider > #input-slide-2:checked ~ .slide-description > .slide-2,
+.slider > #input-slide-3:checked ~ .slide-description > .slide-3 {
+	opacity: 1;
+	visibility: visible;
+	z-index: 2;
 }
 
-.card-part-1.card-part-4 {
-  animation-delay: 15s;
-  background-image: url( ../img/BM%20i-GREAT%20MEDIHARAPAN%20Slide%20Four%20DoctorOnCall.png);
-  z-index: 4;
-}
-.card-part-1.card-part-5 {
-  animation-delay: 20s;
-  background-image: url(../img/BM%20Manfaat-Great-Eastern-Takaful-Main-Slide-DoctorOnCall.png);
-  z-index: 3;
+.slider > .slide-description > label > .text-slide {
+	margin: 0 auto;
+	text-align: left;
 }
 
-
-@keyframes opaqTransition {
-  0% { transform: translateX( 0 ); }
-  25% { transform: translateX( 0 ); }
-  28% { transform: translateX( -1280px ); }
-  100% { transform: translateX( -1280px ); }
+.slide-description .title {
+	font-size: 3.5vw;
+	font-weight: 800;
 }
+
+.slide-description .sub-title {
+	font-size: 2vw;
+}
+
+/* -------------------------------------------------------- autoplay slide */
+
+@keyframes slide {
+
+	0%,
+	100% {
+		opacity: 0;
+	}
+
+	6%,
+	25% {
+		opacity: 1;
+		z-index: 2;
+	}
+
+	30%,
+	50% {
+		opacity: 0;
+		z-index: 2;
+	}
+}
+
+.slider > #input-slide-autoplay:checked ~ ul > li.slide-00 {
+	animation: slide 32000ms infinite -2000ms linear;
+}
+
+.slider > #input-slide-autoplay:checked ~ ul > li.slide-01 {
+	animation: slide 32000ms infinite 6000ms linear;
+}
+
+.slider > #input-slide-autoplay:checked ~ ul > li.slide-02 {
+
+	animation: slide 32000ms infinite 14000ms linear;
+}
+
+.slider > #input-slide-autoplay:checked ~ ul > li.slide-03 {
+
+	animation: slide 32000ms infinite 22000ms linear;
+}
+
+.slider > #input-slide-autoplay:checked ~ ul > li {
+	transition: none;
+}
+
+.slide-00 {
+	background-image: url(../img/EN%20Manfaat-Great-Eastern-Takaful-Main-Slide-DoctorOnCall.png);
+}
+
+.slide-01 {
+	background-image: url(../img/EN%20i-GREAT%20MEDIHARAPAN%20Slide%20Four%20DoctorOnCall.png);
+}
+
+.slide-02 {
+	background-image: url(../img/EN%20i-GR8%20HARAPAN%20Slide%20Two%20DoctorOnCall.png);
+}
+
+.slide-03 {
+	background-image: url(../img/EN%20i-GREAT%20HARAPANCI10%20Slide%20Three%20DoctorOnCall.png);
+}
+
+@media (max-width:768px) {
+	.slider > .slide-description {
+		right: 50%;
+		top: 30%;
+		width: 80%;
+	}
+
+	.slide-description .title {
+		font-size: 24px;
+		font-weight: 800;
+	}
+
+	.slide-description .sub-title {
+		font-size: 16px;
+	}
+}
+
+/* -------------------------------------------------- autoplay text */
+
+@keyframes description {
+
+	0%,
+	5% {
+		opacity: 0;
+		z-index: 2;
+		visibility: visible;
+	}
+
+	6%,
+	24% {
+		opacity: 1;
+		z-index: 2;
+		visibility: visible;
+	}
+
+	25%,
+	100% {
+		opacity: 0;
+		z-index: 0;
+		visibility: hidden;
+	}
+}
+
+.slider > #input-slide-autoplay:checked ~ .slide-description > .slide-0 {
+
+	animation: description 32000ms infinite -2000ms ease;
+}
+
+.slider > #input-slide-autoplay:checked ~ .slide-description > .slide-1 {
+
+	animation: description 32000ms infinite 6000ms ease;
+}
+
+.slider > #input-slide-autoplay:checked ~ .slide-description > .slide-2 {
+
+	animation: description 32000ms infinite 14000ms ease;
+}
+
+.slider > #input-slide-autoplay:checked ~ .slide-description > .slide-3 {
+
+	animation: description 32000ms infinite 22000ms ease;
+}
+
+.slider > #input-slide-autoplay:checked ~ .slide-description > label {
+	transition: none;
+}
+
 /*-----------------------4. contact------------------------------*/
 
 .banner-desc {
 	color: white;
-	display: block;	
-	font-size:14px;
-	margin-bottom: 10px;	
+	display: block;
+	font-size: 14px;
+	margin: 0 5px;
 	padding: 0;
-	text-align: left;
 }
 
 .banner-emel {
 	border-left: 1px #fff solid;
-	font-size:14px;
+	font-size: 14px;
 	padding-left: 40px;
 }
 
 .banner-icon-phone {
-	fill:#fff;	
-	height: auto;
-	margin:0 5px 20px 0;
-	position: relative;
-	top:15px;
-	width: 25px;
-}
-.banner-icon-mail {
 	fill: #fff;
 	height: auto;
-	margin-right: 10px;
-	position: relative;
-	top:15px;
-	width: 30px;
+	width: 15px;
+}
+
+.banner-icon-mail {
+	fill: #fff;
+	width: 15px;
 }
 
 .banner-title {
 	display: block;
 	font-size: 16px;
 	font-weight: 700;
-	margin-bottom: 5px;
+	margin: 0 5px;
 	padding: 0;
 }
 
@@ -317,15 +454,16 @@ header a {
 }
 
 .contact-banner {
-	align-items:center;
-	background-color: #e72;	
+	align-items: center;
+	background-color: #e72;
 	color: #fff;
 	display: flex;
 	font-family: helvetica;
 	justify-content: flex-start;
-	margin:0;
-	padding: 1% 0  1% 20%;
-	}
+	margin: 0;
+	padding: 2% 0 2% 20%;
+}
+
 .cont-banner-wrapper {
 	align-items: flex-start;
 	display: flex;
@@ -334,27 +472,65 @@ header a {
 	text-decoration: none;
 }
 
+@media screen and (max-width:576px) {
+	.contact-banner {
+		padding: 10px;
+	}
+
+	.banner-desc {
+		font-size: 10px;
+	}
+
+	.banner-title {
+		font-size: 10px;
+	}
+
+	.cont-banner-wrapper {
+		margin: auto;
+		padding: 0px;
+		justify-content: center;
+	}
+
+	.banner-emel {
+		padding-left: 9px;
+	}
+
+	.banner-icon-phone {
+		width: 15px;
+	}
+
+	.banner-icon-mail {
+		width: 14px;
+	}
+}
+
 
 /*-----------------------5. FAQ------------------------------*/
 .faq-answers {
 	color: #444;
 	font-size: 14px;
-	margin:0 0 3% 0;
+	margin: 0 0 3% 0;
 	padding-top: 0px;
 }
-.faq-answers span{
-	color:#35A;
+
+.faq-answers span {
+	color: #35A;
 	font-weight: 700;
 }
+
 .faq-container {
 	color: #444;
 	font-family: helvetica;
 	margin-bottom: 7%;
-	text-align: justify;
-	text-justify: inter-character;
+
 }
+
 .faq-container a {
 	color: #444;
+}
+
+.far-container ol li {
+	color: blue;
 }
 
 .faq-container h2 {
@@ -367,6 +543,22 @@ header a {
 	font-size: 16px;
 	margin-bottom: 0px;
 }
+
+@media screen and (max-width: 576px) {
+	.faq-container ol {
+		font-size: 14px;
+		color: #e72;
+	}
+
+	.faq-answers {
+		font-size: 12px;
+	}
+
+	.faq-questions {
+		font-size: 14px;
+	}
+}
+
 
 /*-----------------------6. loginform------------------------------*/
 
@@ -396,7 +588,7 @@ header a {
 	overflow: hidden;
 	padding: 0;
 	position: absolute;
-	width: 1px;	
+	width: 1px;
 	z-index: -1000;
 }
 
@@ -405,7 +597,6 @@ header a {
 	background-position: 0 0;
 	display: inline-block;
 	font-size: 12px;
-	height: 17px;
 	line-height: 17px;
 	margin: 15px;
 	padding-left: 22px;
@@ -422,9 +613,9 @@ header a {
 }
 
 /*--end  checkbox--*/
-.login{
+.login {
 	background-color: #eee;
-	margin-top:20px;
+	margin-top: 20px;
 }
 
 .login-btn {
@@ -437,14 +628,15 @@ header a {
 }
 
 .login-form .login-forget {
-	color:#333;
+	color: #333;
 	font-size: 12px;
 	float: right;
 	margin: 15px;
 
 }
+
 .login-form {
-	color:#333;
+	color: #333;
 	font-family: helvetica;
 	max-width: 700px;
 	margin-left: auto;
@@ -460,10 +652,11 @@ header a {
 	width: 70px;
 
 }
+
 .login-img img {
 	display: block;
 	height: 470px;
-	margin:0 auto;
+	margin: 0 auto;
 	width: auto;
 }
 
@@ -475,23 +668,24 @@ header a {
 @media (max-width:992px) {
 	.login-img img {
 		display: none;
-	}	
+	}
 }
 
 /*-----------------------7. medicine------------------------------*/
 
-.medicine-col a{
-	color:#333;
-	
+.medicine-col a {
+	color: #333;
 }
+
 .medicine-container {
 	border-left: 1px #eee solid;
-	color:#333;
+	color: #333;
 	font-family: helvetica;
 	font-size: 14px;
 	margin-top: 80px;
-
 }
+
+
 .medicine-disclaimer {
 	font-size: 13px;
 	text-align: center;
@@ -501,10 +695,12 @@ header a {
 .medicine-list {
 	text-align: center;
 }
-.medicine-picture{
-	min-height: 100px;
-		display: flex;
+
+.medicine-picture {
+	min-height: 130px;
+	display: flex;
 }
+
 .medicine-picture img {
 	height: auto;
 	margin: auto;
@@ -520,12 +716,12 @@ header a {
 	border: 1px #eee solid;
 	margin: auto auto 10px auto;
 	padding: 10px;
-	text-align: center;
 }
 
 .medicine-textarea {
 	margin: 10px 0;
 }
+
 
 @media(max-width: 768px) {
 	.medicine-container {
@@ -542,29 +738,35 @@ header a {
 	border-radius: 5px;
 	color: #fff;
 	padding: 10px 15px;
+	display: block;
+	margin: 10px;
+	width: max-content;
 }
-.service-container{
+
+.service-container {
 	color: #444;
 	font-family: helvetica;
 	margin: 80px inherit inherit 80px;
 }
+
 .service-container h2 {
 	font-size: 24px;
 	text-align: center;
 }
+
 .service-desc {
-	font-size:14px;
+	font-size: 14px;
 	height: 120px;
 }
 
-.service-textarea{
+.service-textarea {
 	min-height: 200px;
 	padding: 0 25px 15px;
 }
 
 .service-title {
 	font-weight: 700;
-	font-size:16px;
+	font-size: 16px;
 }
 
 .service-wrapper {
@@ -577,27 +779,60 @@ header a {
 .service-wrapper img {
 	width: 100%;
 }
-@media only screen and (min-width: 768px){
+
+@media only screen and (max-width: 768px) {
 	.service-desc {
-	min-height: auto;
+		min-height: 0;
+		font-size: 0.9em;
+	}
+
+	.service-title {
+		font-size: 0.9em;
+	}
+
+	.service-wrapper {
+		min-height: 0;
+		width: auto;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.service-wrapper {
+		width: auto;
+	}
+
+	.service-desc {
+		min-height: 0;
+	}
+
+	.service-textarea {
+		padding: 0 8px;
 	}
 }
 
 /*-----------------------9. symptoms------------------------------*/
 .symptom-container {
-	color:#333;
+	color: #333;
 	font-family: helvetica;
 	font-size: 14px;
 	margin-top: 80px;
+	text-align: center;
 }
-.symptom-container a{
-	margin-top: 20px;
-	
+
+.symptom-container a {
+	text-align: center;
 }
+
+.symptom-container p,
+h2 {
+	text-align: left;
+}
+
 .symp-desc {
 	margin: 2px;
 	padding: 0;
 }
+
 .symp-icon {
 	align-content: center;
 	background-color: #e72;
@@ -606,28 +841,36 @@ header a {
 	height: 50px;
 	width: 50px;
 }
+
 .symp-icon svg {
-	fill:#fff;
+	fill: #fff;
 	margin: 6px;
 	width: 40px;
 }
+
 .symp-icon-text {
 	display: flex;
 	margin: 12% 2%;
 }
+
 .symp-med-btn {
 	background-color: #e22;
 	border-radius: 5px;
-	bottom:0;
+	bottom: 0;
 	color: #fff;
-	padding: 10px 15px;
+	padding: 10px 20px;
 	text-decoration: none;
-	position: absolute;
+	margin: 0 auto;
+	display: block;
+	width: max-content;
+
 }
+
 .symp-textarea {
 	overflow: auto;
 	padding-left: 10px;
 }
+
 .symp-title {
 	font-weight: 600;
 	margin: 0;
