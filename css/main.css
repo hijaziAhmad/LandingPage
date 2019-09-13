@@ -196,19 +196,65 @@ header a {
 
 /*end header*/
 /*-----------------------2. adcontainer------------------------------*/
-.adcontainer {
-	background-color: #edb;
-	font-family: helvetica;
-	height: 200px;
-	padding: 60px;
-	width: 100%;
-}
+.ads-container{
+		background-color: #F5E6B3;
+		color: #fff;
+		display: flex;
+	margin-top:20px;
+	}
+	.ads-textarea{
+		padding: 20px 30px;
+		text-align: left;
+		font-family: helvetica;
+				
+	}
+	.ads-img-holder{
+		margin-bottom: -6px;
+	}
+	.ads-img-holder img{
+		max-width: 400px;
+		height: auto;
+		padding:2px;
+		
+	}
+	.btn-ads{
+		padding: 10px 15px;
+		color: #fff;
+		background-color: #e72;
+		margin: 0 auto;
+		text-align: center;
+		border-radius: 5px;
+		text-decoration: none;
+		margin: 20px auto;
+		font-weight: 600;
+		font-size: 14px;
+	}
+	.ads-textarea .ads-desc{
+		font-size: 16px;
+		color: #333;
+		opacity: 0.8;
+		margin: 20px 0;
+	}
+	.ads-textarea .ads-title1{
+		font-size: 26px;
+		color: #333;
+		margin:5px;
+		font-weight: 600;
+	}
+	@media (max-width:768px){
+		.ads-img-holder{
+			display:none;
+		}
+		.ads-container{
+			padding: 20px;
+		}
+	}
 
 /*-----------------------3. carousel------------------------------*/
 /* -------------------------------------------------------- slider */
 .slider {
 	display: block;
-	min-height: 500px;
+	min-height: 650px;
 	overflow: hidden;
 	position: relative;
 
@@ -222,7 +268,7 @@ header a {
 }
 
 .slider > ul > li {
-	background-position: 90% 100%;
+	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
@@ -248,7 +294,7 @@ header a {
 	color: #fff;
 	font-family: helvetica;
 	position: absolute;
-	right: 70%;
+	right: 45%;
 	text-shadow: 0 5px 6px #333;
 	top: calc(35% - 3vw);
 	width: 50%;
@@ -362,6 +408,10 @@ header a {
 	.slide-description .sub-title {
 		font-size: 12px;
 	}
+	
+	.slider > ul > li {
+		background-position: right top;
+	}
 }
 
 /* -------------------------------------------------- autoplay text */
@@ -412,6 +462,54 @@ header a {
 
 .slider > #input-slide-autoplay:checked ~ .slide-description > label {
 	transition: none;
+}
+}
+/* -------------------------------------------------------- autoplay dot */
+.slider > .slider-dot {
+	position: relative;
+	margin-top: -4vw;
+	text-align: center;
+	z-index: 300;
+	font-size: 0;
+}
+.slider > .slider-dot > label {
+	position: relative;
+	display: inline-block;
+	margin: 12vw0.5vw;
+	width: 10vw;
+	height: 12vw;
+	border-radius: 50%;
+
+	background-color: #FFF;
+}
+.slider > #input-slide-0:checked ~ .slider-dot > label.slide-00,
+.slider > #input-slide-1:checked ~ .slider-dot > label.slide-01,
+.slider > #input-slide-2:checked ~ .slider-dot > label.slide-02,
+.slider > #input-slide-3:checked ~ .slider-dot > label.slide-03 {
+	background-color: #FD7FE3;
+}
+.slider > .slider-dot > label:hover{
+	background-color: #7E6DE0;
+}
+@keyframes dot {
+	0%, 24%	{ background-color: #e72; }
+	25%, 100% { background: #FFF; }
+}
+.slider > #input-slide-autoplay:checked ~ .slider-dot > label.slide-00{
+	
+	animation: dot 32000ms infinite -2000ms;	
+}
+.slider > #input-slide-autoplay:checked ~ .slider-dot > label.slide-01{
+	
+	animation: dot 32000ms infinite 6000ms;	
+}
+.slider > #input-slide-autoplay:checked ~ .slider-dot > label.slide-02{
+	
+	animation: dot 32000ms infinite 14000ms;	
+}
+.slider > #input-slide-autoplay:checked ~ .slider-dot > label.slide-03{
+	
+	animation: dot 32000ms infinite 22000ms;	
 }
 
 /*-----------------------4. contact------------------------------*/
@@ -707,7 +805,9 @@ header a {
 .medicine-list {
 	text-align: center;
 }
-
+.medicine-name{
+	font-weight: 600;
+}
 .medicine-picture {
 	min-height: 130px;
 	display: flex;
@@ -718,20 +818,33 @@ header a {
 	margin: auto;
 	width: 100px;
 }
-
-.medicine-price {
-	color: #e22;
-	font-weight: 900;
+.medicine-price{
+	width: 75%;
+	margin:0 auto;
 }
 
+.medicine-textarea hr{
+	width:30px;
+	background-color: #E72;
+	border-radius:5px;
+	height:4px;
+	margin:10px auto;
+	border:none;
+	
+}
 .medicine-product {
 	border: 1px #eee solid;
 	margin: auto auto 10px auto;
-	padding: 10px;
+	padding: 5px;
 }
 
 .medicine-textarea {
 	margin: 10px 0;
+}
+.medicine-textarea .symp-med-btn{
+	color: #fff;
+	padding: 5px 10px;
+	font-size:12px;
 }
 
 
