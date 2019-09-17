@@ -119,10 +119,13 @@ header a {
 	align-items: center;
 	display: flex;
 	margin-left: auto;
+	margin-right:15px;
+	
 }
 
 .header-phone svg {
 	height: 20px;
+	margin-right:15px;
 }
 
 .logo-container {
@@ -133,7 +136,7 @@ header a {
 
 .logo-container .doc-logo {
 	height: 44px;
-	margin: auto 0 auto auto;
+	margin: auto 15px auto auto;
 	padding-right: 10px;
 	width: auto;
 }
@@ -144,8 +147,8 @@ header a {
 
 .logo-header {
 	height: 70PX;
-	margin-right: auto;
 	width: auto;
+	margin-right:15px;
 }
 
 .mobile-links {
@@ -165,9 +168,7 @@ header a {
 		margin: 0;
 	}
 
-	.logo-container {
-		font-size: 10px;
-	}
+	
 
 }
 
@@ -180,10 +181,11 @@ header a {
 	.btn,
 	.header-phone {
 		display: none;
+		
 	}
 
 	.logo-header {
-		height: 50px;
+		height: 72px;
 		margin-left: auto;
 	}
 
@@ -196,68 +198,32 @@ header a {
 
 /*end header*/
 /*-----------------------2. adcontainer------------------------------*/
-.ads-container{
-		background-color: #F5E6B3;
-		color: #fff;
-		display: flex;
-	margin-top:20px;
-	}
-	.ads-textarea{
-		padding: 20px 30px;
-		text-align: left;
-		font-family: helvetica;
-				
-	}
-	.ads-img-holder{
-		margin-bottom: -6px;
-	}
-	.ads-img-holder img{
-		max-width: 400px;
-		height: auto;
-		padding:2px;
-		
-	}
-	.btn-ads{
-		padding: 10px 15px;
-		color: #fff;
-		background-color: #e72;
-		margin: 0 auto;
-		text-align: center;
-		border-radius: 5px;
-		text-decoration: none;
-		margin: 20px auto;
-		font-weight: 600;
-		font-size: 14px;
-	}
-	.ads-textarea .ads-desc{
-		font-size: 16px;
-		color: #333;
-		opacity: 0.8;
-		margin: 20px 0;
-	}
-	.ads-textarea .ads-title1{
-		font-size: 26px;
-		color: #333;
-		margin:5px;
-		font-weight: 600;
-	}
+.ads-container {
+    /* background-color: #F5E6B3; */
+    background-image: url(../img/boost_grab_banner_desktop.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 201px;
+    width: 100%;
+    margin-top: 20px;
+}
+	
 	@media (max-width:768px){
-		.ads-img-holder{
-			display:none;
-		}
+	
 		.ads-container{
-			padding: 20px;
+			background-image:url(../img/boost_grab_banner.png);
+			height: 150px;
 		}
 	}
 
 /*-----------------------3. carousel------------------------------*/
 /* -------------------------------------------------------- slider */
 .slider {
-	display: block;
-	min-height: 650px;
-	overflow: hidden;
-	position: relative;
-
+    display: block;
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
 }
 
 /* -------------------------------------------------------- slide */
@@ -561,9 +527,12 @@ header a {
 	font-family: helvetica;
 	justify-content: flex-start;
 	margin: 0;
-	padding: 2% 0 2% 20%;
+	padding: 2% 0 2% 13%;
 }
-
+.contact-banner-container{
+	display: flex;
+	justify-content: flex-start;
+}
 .cont-banner-wrapper {
 	align-items: flex-start;
 	display: flex;
@@ -571,7 +540,11 @@ header a {
 	text-align: left;
 	text-decoration: none;
 }
-
+@media screen and (max-width:1200px){
+	.contact-banner{
+	padding: 2% 0 2% 8%;
+	}
+}
 @media screen and (max-width:576px) {
 	.contact-banner {
 		padding: 25px 10px;
@@ -738,11 +711,12 @@ header a {
 }
 
 .login-form .login-forget {
-	color: #333;
-	font-size: 12px;
-	float: right;
-	margin: 15px;
-
+    color: #333;
+    font-size: 12px;
+    display: block;
+    margin: 15px;
+    text-align: center;
+    text-decoration: underline;
 }
 
 .login-form {
@@ -792,7 +766,7 @@ header a {
 	color: #333;
 	font-family: helvetica;
 	font-size: 14px;
-	margin-top: 80px;
+	margin-top: 20px;
 }
 
 
@@ -851,6 +825,13 @@ header a {
 @media(max-width: 768px) {
 	.medicine-container {
 		border: none;
+		order:1;
+	}
+	
+}
+@media(max-width: 576px){
+	.disclaimer-alignment{
+		display: block;
 	}
 }
 
@@ -859,13 +840,15 @@ header a {
 /*-----------------------8. Services------------------------------*/
 
 .service-btn {
-	background-color: #e22;
-	border-radius: 5px;
-	color: #fff;
-	padding: 10px 15px;
-	display: block;
-	margin: 10px;
-	width: max-content;
+    background-color: #e22;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+	font-size:12px;
+    margin: 10px auto;
+    padding: 10px 15px;
+    width: 120px;
+    text-align: center;
 }
 
 .service-container {
@@ -919,6 +902,9 @@ header a {
 		min-height: 0;
 		width: auto;
 	}
+	.service-btn{
+		margin:16px auto;
+	}
 }
 
 @media only screen and (max-width: 576px) {
@@ -940,7 +926,7 @@ header a {
 	color: #333;
 	font-family: helvetica;
 	font-size: 14px;
-	margin-top: 80px;
+	margin-top: 20px;
 	text-align: center;
 }
 
@@ -1000,7 +986,11 @@ h2 {
 	font-weight: 600;
 	margin: 0;
 }
-
+@media (max-width:768px){
+	.symptom-container{
+		order:2;
+	}
+}
 
 /*-----------------------10. footer------------------------------*/
 

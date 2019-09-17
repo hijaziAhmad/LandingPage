@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ms" ng-app="landing">
-<!--v1.6-->
+<!--v1.8-->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -60,9 +60,10 @@
 
 <body ng-controller="landingHomeController">
 	<header>
-		<div class="logo-container">
-			<img class="logo-header" src="/landingPage/img/gelogo.svg" alt="great eastern takaful logo">
-			<img class="doc-logo" src="/landingPage/img/doctorOnCall-logo.svg" alt="DoctorOnCall logo">
+		<div class=" logo-container">
+			<img class="logo-header" src="/landingPage/img/gelogo.svg" alt="great eastern takaful logo">		
+			<img class="doc-logo" src="/landingPage/img/doc-dengan-kjsama.svg" alt="dengan kerjasama doctor on call">
+
 
 			<div class="header-phone">
 				<svg  viewBox="0 0 512.01 512.01"><title>phone-solid</title><path d="M493.4,24.6l-104-24a24.16,24.16,0,0,0-27.5,13.9l-48,112a23.94,23.94,0,0,0,6.9,28l60.6,49.6A370.61,370.61,0,0,1,204.2,381.3l-49.6-60.6a24,24,0,0,0-28-6.9l-112,48a24.29,24.29,0,0,0-14,27.6l24,104A24,24,0,0,0,48,512c256.1,0,464-207.5,464-464A24,24,0,0,0,493.4,24.6Z" transform="translate(0.01 0.01)"/></svg>	+603 84082000
@@ -133,15 +134,16 @@
     </div>
   </div>
   </a>
-	<div class="contact-banner no-gutters">
-		<div class="cont-banner-wrapper">
-			<svg class="banner-icon-phone" viewBox="0 0 512.01 512.01"><title>phone-solid</title><path class="cls-1" d="M493.4,24.6l-104-24a24.16,24.16,0,0,0-27.5,13.9l-48,112a23.94,23.94,0,0,0,6.9,28l60.6,49.6A370.61,370.61,0,0,1,204.2,381.3l-49.6-60.6a24,24,0,0,0-28-6.9l-112,48a24.29,24.29,0,0,0-14,27.6l24,104A24,24,0,0,0,48,512c256.1,0,464-207.5,464-464A24,24,0,0,0,493.4,24.6Z" transform="translate(0.01 0.01)"/></svg>
-			<div class="banner-textarea">
-				<p class="banner-title">Hubungi Kami</p>
-				<a href="tel:+60384082000" class="banner-desc">+603-8408 2000</a>
+	<div class="contact-banner container-fluid">
+		<div class="contact-banner-container">
+			<div class="cont-banner-wrapper ">
+				<svg class="banner-icon-phone" viewBox="0 0 512.01 512.01"><title>phone-solid</title><path class="cls-1" d="M493.4,24.6l-104-24a24.16,24.16,0,0,0-27.5,13.9l-48,112a23.94,23.94,0,0,0,6.9,28l60.6,49.6A370.61,370.61,0,0,1,204.2,381.3l-49.6-60.6a24,24,0,0,0-28-6.9l-112,48a24.29,24.29,0,0,0-14,27.6l24,104A24,24,0,0,0,48,512c256.1,0,464-207.5,464-464A24,24,0,0,0,493.4,24.6Z" transform="translate(0.01 0.01)"/></svg>
+				<div class="banner-textarea">
+					<p class="banner-title">Hubungi Kami</p>
+					<a href="tel:+60384082000" class="banner-desc">+603-8408 2000</a>
+				</div>
 			</div>
-		</div>
-		<div class="cont-banner-wrapper banner-emel">
+			<div class="cont-banner-wrapper banner-emel">
 			<svg class="banner-icon-mail" viewBox="0 0 172 172" >
 				<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
 					<path d="M0,172v-172h172v172z" fill="none"></path>
@@ -159,7 +161,10 @@
 				<a href="mailto:contact@doctoroncall.com.my" class="banner-desc">contact@DoctorOnCall.com.my</a>
 			</div>
 		</div>
+		</div>
 	</div>
+	
+	
 	<div id="services" class=" service-container container" >
 		<h2>Perkhidmatan Kesihatan</h2>
 			<div class="row">
@@ -231,16 +236,8 @@
 		</div>
 		</div>
 	</div>
-	<div class="ads-container container">
-		<div class="ads-img-holder">
-			<img loading="lazy" src="/landingPage/img/merdeka-62-tahun.png" alt="">
-		</div>
-		<div class="ads-textarea">
-			<p class="ads-title1">Nikmati Diskaun RM31 dan penghantaran percuma</p>
-			<p class="ads-desc">Apabila anda membuat pembelian lebih daripada rm120</p>
-			<a href="https://www.doctoroncall.com.my/medicine" class="btn-ads">Pesan Ubat</a>
-		</div>
-	</div>
+		<a href="https://doctoroncall.com.my/medicine">
+	<div class="ads-container container"></div></a>
 	<div class="container">
 		<div class="row">
 			<div id="symptoms" class="symptom-container col-lg-4">
@@ -429,7 +426,7 @@
 					</div>
 				
 				</div>
-				<p class="medicine-disclaimer">Penafian: Great Eastern Takaful tidak bertanggungjawab dalam penjualan ubat, suplemen atau produk. Perkhidmatan ini disediakan oleh DoctorOnCall</p><br>
+				<p class="medicine-disclaimer">Penafian: Great Eastern Takaful tidak<span class="disclaimer-alignment"> bertanggungjawab dalam penjualan</span> <span class="disclaimer-alignment">ubat, suplemen atau produk.</span><span class="disclaimer-alignment"> Perkhidmatan ini disediakan </span><span class="disclaimer-alignment">oleh DoctorOnCall</span></p><br>
 				<a href="https://www.doctoroncall.com.my/medicine" class="symp-med-btn">Lihat Semua</a><br>
 			</div>
 		</div>

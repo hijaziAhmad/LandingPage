@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="landing">
-<!--v1.6-->
+<!--v1.8-->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -61,7 +61,7 @@
 	<header>
 		<div class="logo-container">
 			<img class="logo-header" src="/landingPage/img/gelogo.svg" alt="doc">
-			<img class="doc-logo" src="/landingPage/img/doctorOnCall-logo.svg" alt="DoctorOncall Malaysia Logo">
+			<img class="doc-logo" src="/landingPage/img/doc-in-partnshp.svg" alt="DoctorOncall Malaysia Logo">
 
 			<div class="header-phone">
 				<svg  viewBox="0 0 512.01 512.01"><title>phone-solid</title><path d="M493.4,24.6l-104-24a24.16,24.16,0,0,0-27.5,13.9l-48,112a23.94,23.94,0,0,0,6.9,28l60.6,49.6A370.61,370.61,0,0,1,204.2,381.3l-49.6-60.6a24,24,0,0,0-28-6.9l-112,48a24.29,24.29,0,0,0-14,27.6l24,104A24,24,0,0,0,48,512c256.1,0,464-207.5,464-464A24,24,0,0,0,493.4,24.6Z" transform="translate(0.01 0.01)"/></svg>	+603 84082000
@@ -133,17 +133,18 @@
     </div>
   </div>
   </a>
-	<div class="contact-banner">
-		<div class="cont-banner-wrapper">
-			<svg class="banner-icon-phone" viewBox="0 0 512.01 512.01"><title>phone-solid</title><path class="cls-1" d="M493.4,24.6l-104-24a24.16,24.16,0,0,0-27.5,13.9l-48,112a23.94,23.94,0,0,0,6.9,28l60.6,49.6A370.61,370.61,0,0,1,204.2,381.3l-49.6-60.6a24,24,0,0,0-28-6.9l-112,48a24.29,24.29,0,0,0-14,27.6l24,104A24,24,0,0,0,48,512c256.1,0,464-207.5,464-464A24,24,0,0,0,493.4,24.6Z" transform="translate(0.01 0.01)"/>
-			</svg>
+	<div class="contact-banner container-fluid">
+		<div class="contact-banner-container">
+			<div class="cont-banner-wrapper ">
+				<svg class="banner-icon-phone" viewBox="0 0 512.01 512.01"><title>phone-solid</title><path class="cls-1" d="M493.4,24.6l-104-24a24.16,24.16,0,0,0-27.5,13.9l-48,112a23.94,23.94,0,0,0,6.9,28l60.6,49.6A370.61,370.61,0,0,1,204.2,381.3l-49.6-60.6a24,24,0,0,0-28-6.9l-112,48a24.29,24.29,0,0,0-14,27.6l24,104A24,24,0,0,0,48,512c256.1,0,464-207.5,464-464A24,24,0,0,0,493.4,24.6Z" transform="translate(0.01 0.01)"/>
+				</svg>
 
-			<div class="banner-textarea">
-				<p class="banner-title">Call us for any inquiry</p>
-				<a href="tel:+60384082000" class="banner-desc">+603-8408 2000</a>
+				<div class="banner-textarea">
+					<p class="banner-title">Call us for any inquiry</p>
+					<a href="tel:+60384082000" class="banner-desc">+603-8408 2000</a>
+				</div>
 			</div>
-		</div>
-		<div class="cont-banner-wrapper banner-emel">
+			<div class="cont-banner-wrapper banner-emel">
 			<svg class="banner-icon-mail" viewBox="0 0 172 172" >
 				<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
 					<path d="M0,172v-172h172v172z" fill="none"></path>
@@ -159,7 +160,10 @@
 				<a href="mailto:contact@doctoroncall.com.my" class="banner-desc">contact@DoctorOnCall.com.my</a>
 			</div>
 		</div>
+		</div>
 	</div>
+	
+	
 	<div id="services" class=" service-container container" >
 		<h2>Healthcare Services</h2>
 			<div class="row">
@@ -231,16 +235,8 @@
 		</div>
 		</div>
 	</div>
-	<div class="ads-container container">
-		<div class="ads-img-holder">
-			<img loading="lazy" src="/landingPage/img/merdeka-62-years.png" alt="">
-		</div>
-		<div class="ads-textarea">
-			<p class="ads-title1">Enjoy RM31 discount and FREE Delivery </p>
-			<p class="ads-desc">when you purchase more than RM120</p>
-			<a href="https://www.doctoroncall.com.my/medicine/en" class="btn-ads">Order Medicine</a>
-		</div>
-	</div>
+	<a href="https://doctoroncall.com.my/medicine/en">
+	<div class="ads-container container"></div></a>
 
 	<div class="container">
 		<div class="row">
@@ -429,7 +425,7 @@
 					</div>
 				
 				</div>
-				<p class="medicine-disclaimer">Disclaimer: Great Eastern Takaful does not sell any medications, supplements or products. This service is solely provided by DoctorOnCall.</p><br>
+				<p class="medicine-disclaimer">Disclaimer: Great Eastern Takaful does not sell<span class="disclaimer-alignment"> any medications, supplements or products.</span><span class="disclaimer-alignment"> This service is solely provided by</span><span class="disclaimer-alignment"> DoctorOnCall</span></p><br>
 				<a href="https://www.doctoroncall.com.my/medicine/en" class="symp-med-btn">View All</a><br>
 			</div>
 		</div>
