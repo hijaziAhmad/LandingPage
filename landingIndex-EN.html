@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="landing">
 <!--v1.6-->
 <head>
 	<meta charset="UTF-8">
@@ -35,16 +35,33 @@
 		}
 		window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "UA-80312661-1")
 	</script>
-	<link rel="stylesheet" href="./css/bootstrap-grid.min.css" type="text/css">
-	<link rel="stylesheet" href="./css/main.min.css" type="text/css">
+	<script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-80312661-1', 'auto');
+        ga('send', 'pageview');
+
+	</script>
+	<link rel="stylesheet" href="/landingPage/css/bootstrap-grid.min.css" type="text/css">
+	<link rel="stylesheet" href="/landingPage/css/main.css" type="text/css">
 
 </head>
 
-<body>
+<body  ng-controller="landingHomeController">
 	<header>
 		<div class="logo-container">
-			<img class="logo-header" src="./img/gelogo.svg" alt="doc">
-			<img class="doc-logo" src="./img/doctorOnCall-logo.svg" alt="DoctorOncall Malaysia Logo">
+			<img class="logo-header" src="/landingPage/img/gelogo.svg" alt="doc">
+			<img class="doc-logo" src="/landingPage/img/doctorOnCall-logo.svg" alt="DoctorOncall Malaysia Logo">
 
 			<div class="header-phone">
 				<svg  viewBox="0 0 512.01 512.01"><title>phone-solid</title><path d="M493.4,24.6l-104-24a24.16,24.16,0,0,0-27.5,13.9l-48,112a23.94,23.94,0,0,0,6.9,28l60.6,49.6A370.61,370.61,0,0,1,204.2,381.3l-49.6-60.6a24,24,0,0,0-28-6.9l-112,48a24.29,24.29,0,0,0-14,27.6l24,104A24,24,0,0,0,48,512c256.1,0,464-207.5,464-464A24,24,0,0,0,493.4,24.6Z" transform="translate(0.01 0.01)"/></svg>	+603 84082000
@@ -53,23 +70,23 @@
 
 
 		<div class="desktop-links">
-			<a href="#services">Health Services</a>
-			<a href="#symptoms">Top Conditions</a>
-			<a href="#medicine">Top Medicines</a>
-			<a href="#faq">FAQs |</a>
-			<a href="./landingIndex-BM.html"><img src="./img/malaysia-flag-icon-32.png" alt="Malaysia Flag" class="flag"> BM</a>
+			<a target="_self" href="#services">Health Services</a>
+			<a target="_self" href="#symptoms">Top Conditions</a>
+			<a target="_self" href="#medicine">Top Medicines</a>
+			<a target="_self" href="#faq">FAQs |</a>
+			<a target="_self" href="/greateasterntakaful"><img src="/landingPage/img/malaysia-flag-icon-32.png" alt="Malaysia Flag" class="flag"> BM</a>
 			<a href="https://www.doctoroncall.com.my/patient#/signin" class="header-btn">Sign In</a>
 		</div>
 
 		<div class="mobile-links">
 			<a href="#">
-				<img src="./img/icons8-menu-48.png" alt="menu icon for mobile">
+				<img src="/landingPage/img/icons8-menu-48.png" alt="menu icon for mobile">
 			</a>
 			<div class="drop-downlist">
-				<a href="#service">Health Services</a>
-				<a href="#symptoms">Top Conditions</a>
-				<a href="#medicines">Top Medicines</a>
-				<a href="#faq">FAQ</a>
+				<a target="_self" href="#services">Health Services</a>
+				<a target="_self" href="#symptoms">Top Conditions</a>
+				<a target="_self" href="#medicine">Top Medicines</a>
+				<a target="_self" href="#faq">FAQ</a>
 			</div>
 		</div>
 
@@ -149,7 +166,7 @@
 				<div class="col-lg-4">
 
 					<div class="service-wrapper">
-						<img loading="lazy" src="./img/services-online-booking-doctor-on-call-malaysia.jpg" alt="online doctor private consultation - DoctorOnCall">
+						<img loading="lazy" src="/landingPage/img/services-online-booking-doctor-on-call-malaysia.jpg" alt="online doctor private consultation - DoctorOnCall">
 						<div class="service-textarea">
 							<p class="service-title">Speak To A Doctor</p>
 							<p class="service-desc">Consult with our doctor anytime, anywhere via chat, phone or video call.</p>
@@ -161,7 +178,7 @@
 				<div class="col-lg-4">
 
 					<div class="service-wrapper">
-						<img loading="lazy" src="./img/services-epharmacy-doctor-on-call-malaysia.jpg" alt="online epharmacy DoctorOnCall Malaysia">
+						<img loading="lazy" src="/landingPage/img/services-epharmacy-doctor-on-call-malaysia.jpg" alt="online epharmacy DoctorOnCall Malaysia">
 						<div class="service-textarea">
 							<p class="service-title">E-pharmacy</p>
 							<p class="service-desc">Buy medications, health supplements and personal care products at competitive prices and get them delivered to your doorstep for <b>FREE</b>.</p>
@@ -173,7 +190,7 @@
 				<div class="col-lg-4">
 
 					<div class="service-wrapper">
-						<img loading="lazy" src="./img/services-online-booking-doctor-on-call-malaysia.jpg" alt="online booking doctor specialist DoctorOnCall Malaysia">
+						<img loading="lazy" src="/landingPage/img/services-online-booking-doctor-on-call-malaysia.jpg" alt="online booking doctor specialist DoctorOnCall Malaysia">
 						<div class="service-textarea">
 							<p class="service-title">Specialist Booking</p>
 							<p class="service-desc">Book an appointment with a specialist from our partner hospitals.</p>
@@ -190,13 +207,13 @@
 		<div class="login-wrapper row">
 			<div class="col-md-7">
 				<div class="login-form">
-					<img class="logo-login" src="./img/doctorOnCall-logo.svg" alt="DoctorOncall Malaysia Logo">
+					<img class="logo-login" src="/landingPage/img/doctorOnCall-logo.svg" alt="DoctorOncall Malaysia Logo">
 					<p class="login-title">Consult With Our Doctors</p>
-					<form action=" https://www.doctoroncall.com.my/patient#/signin" class="form-wrapper">
+					<form  class="form-wrapper" ng-submit="signInUser()">
 						<p><label>Email / Mobile Number</label></p>
-						<input type="text" name="uname" required placeholder="abc@email.com / 6012 345 6789">
+						<input type="text" name="uname" required placeholder="abc@email.com / 6012 345 6789" ng-model="user.emailOrMobile">
 						<p><label>Password</label></p>
-						<input type="password" name="pswd" required>
+						<input type="password" name="pswd" required ng-model="user.password">
 						<input type="checkbox" name="checkbox1" id="checkbox1" class="css-checkbox" checked="checked"><label for="checkbox1" class="css-label">Yes, I have read and agree to the <a href="https://www.doctoroncall.com.my/termsOfService">Terms &amp; Conditions and Privacy</a> and <a href="https://www.doctoroncall.com.my/privacyPolicy">Personal Data Protection Policy</a></label>
 
 						<button type="submit" class="login-btn">Sign In To “Consult A Doctor”</button>
@@ -208,7 +225,7 @@
 			</div>
 			<div class="login-img col-md-5">
 				<div class="img-wrapper">
-					<img loading="lazy" src="./img/doctor_login.png" alt="Doc">
+					<img loading="lazy" src="/landingPage/img/doctor_login.png" alt="Doc">
 				</div>
 			</div>
 		</div>
@@ -216,7 +233,7 @@
 	</div>
 	<div class="ads-container container">
 		<div class="ads-img-holder">
-			<img loading="lazy" src="./img/merdeka-62-years.png" alt="">
+			<img loading="lazy" src="/landingPage/img/merdeka-62-years.png" alt="">
 		</div>
 		<div class="ads-textarea">
 			<p class="ads-title1">Enjoy RM31 discount and FREE Delivery </p>
@@ -324,7 +341,7 @@
 						<a href="https://www.doctoroncall.com.my/medicine/en/supplements/blackmores-fish-oil-1000mg">
 							<div class="medicine-product">
 								<div class="medicine-picture" >
-									<img loading="lazy" src="./img/Blackmores-Fish-Oil-1000mg-Efarmasi-Malaysia-DoctorOnCall-Online-Medicine.png"	 alt="Blackmores Fish Oil 1000mg Efarmasi Malaysia DoctorOnCall Online Medicine">
+									<img loading="lazy" src="/landingPage/img/Blackmores-Fish-Oil-1000mg-Efarmasi-Malaysia-DoctorOnCall-Online-Medicine.png"	 alt="Blackmores Fish Oil 1000mg Efarmasi Malaysia DoctorOnCall Online Medicine">
 								</div>
 								<div class="medicine-textarea">
 									<p class="medicine-name">Blackmores Fish Oil 1000mg</p>
@@ -339,7 +356,7 @@
 						<a href="https://www.doctoroncall.com.my/medicine/en/drugs/b40-articap-250mg-100s">
 							<div class="medicine-product">
 								<div class="medicine-picture" >
-									<img loading="lazy" src="./img/Artricap-250mg-Capsule-Efarmasi-Malaysia-DoctorOnCall-Online-Medicine.png" alt="Artricap 250mg Capsule Efarmasi Malaysia DoctorOnCall Online Medicine">
+									<img loading="lazy" src="/landingPage/img/Artricap-250mg-Capsule-Efarmasi-Malaysia-DoctorOnCall-Online-Medicine.png" alt="Artricap 250mg Capsule Efarmasi Malaysia DoctorOnCall Online Medicine">
 								</div>
 								<div class="medicine-textarea">
 									<p class="medicine-name">Artricap 250mg Capsule</p>									
@@ -354,7 +371,7 @@
 						<a href="https://www.doctoroncall.com.my/medicine/en/hygiene/bages-ointment-muscle-pain">
 							<div class="medicine-product">
 								<div class="medicine-picture" >
-									<img loading="lazy"  src="./img/Flanil-Cream-Efarmasi-Malaysia-DoctorOnCall-Online-Medicine.png" alt="Flanil Cream Efarmasi Malaysia DoctorOnCall Online Medicine">
+									<img loading="lazy"  src="/landingPage/img/Flanil-Cream-Efarmasi-Malaysia-DoctorOnCall-Online-Medicine.png" alt="Flanil Cream Efarmasi Malaysia DoctorOnCall Online Medicine">
 								</div>
 								<div class="medicine-textarea">
 									<p class="medicine-name">Flanil Cream</p>
@@ -369,7 +386,7 @@
 						<a href="https://www.doctoroncall.com.my/medicine/en/drugs/berocca-effervescent-15-tabs">
 							<div class="medicine-product">
 								<div class="medicine-picture" >
-									<img loading="lazy" src="./img/Berocca-Effervescent-Tablet-Efarmasi-Malaysia-DoctorOnCall-Online-Medicine.png" alt="Berocca Effervescent Tablet Efarmasi Malaysia DoctorOnCall Online Medicine">
+									<img loading="lazy" src="/landingPage/img/Berocca-Effervescent-Tablet-Efarmasi-Malaysia-DoctorOnCall-Online-Medicine.png" alt="Berocca Effervescent Tablet Efarmasi Malaysia DoctorOnCall Online Medicine">
 								</div>
 								<div class="medicine-textarea">
 									<p class="medicine-name">Berocca Effervescent Tablet</p>
@@ -384,7 +401,7 @@
 						<a href="https://www.doctoroncall.com.my/medicine/en/drugs/caltrate-600-d">
 							<div class="medicine-product">
 								<div class="medicine-picture" >
-									<img loading="lazy" src="./img/Caltrate-600+D-Tablet-Efarmasi-Malaysia-DoctorOnCall-Online-Medicine.png" alt="Caltrate 600+D Tablet Efarmasi Malaysia DoctorOnCall Online Medicine">
+									<img loading="lazy" src="/landingPage/img/Caltrate-600+D-Tablet-Efarmasi-Malaysia-DoctorOnCall-Online-Medicine.png" alt="Caltrate 600+D Tablet Efarmasi Malaysia DoctorOnCall Online Medicine">
 								</div>
 								<div class="medicine-textarea">
 									<p class="medicine-name">Caltrate 600+D Tablet</p>
@@ -399,7 +416,7 @@
 						<a href="https://www.doctoroncall.com.my/medicine/en/drugs/ural-sachet">
 							<div class="medicine-product">
 								<div class="medicine-picture">
-									<img loading="lazy" src="./img/Ural-Effervescent-Granule-Efarmasi-Malaysia-DoctorOnCall-Online-Medicine.png" alt="Ural Effervescent Granule Efarmasi Malaysia DoctorOnCall Online Medicine">
+									<img loading="lazy" src="/landingPage/img/Ural-Effervescent-Granule-Efarmasi-Malaysia-DoctorOnCall-Online-Medicine.png" alt="Ural Effervescent Granule Efarmasi Malaysia DoctorOnCall Online Medicine">
 								</div>
 								<div class="medicine-textarea">
 									<p class="medicine-name">Ural Effervescent Granule</p>
@@ -447,12 +464,355 @@
 	
 	<footer>
 		<a href="https://www.doctoroncall.com.my/termsOfService">Terms and Conditions</a>
-			<a href="#services">Health Services</a>
-			<a href="#symptoms">Top Conditions</a>
-			<a href="#medicine">Top Medicines</a>
-			<a href="#faq">FAQs </a>
-		<a href="./landingIndex-BM.html"><img src="./img/malaysia-flag-icon-32.png" alt="Malaysia Flag" class="flag"> BM</a>
+			<a target="_self" href="#services">Health Services</a>
+			<a target="_self" href="#symptoms">Top Conditions</a>
+			<a target="_self" href="#medicine">Top Medicines</a>
+			<a target="_self" href="#faq">FAQs </a>
+		<a href="/greateasterntakaful"><img src="/landingPage/img/malaysia-flag-icon-32.png" alt="Malaysia Flag" class="flag"> BM</a>
 	</footer>
 </body>
 
+<script src="/build/tpbundle.min.js"></script>
+<script src="/bower_components/angular-jwt/dist/angular-jwt.js"></script>
+<script src="/angular/utils.js"></script>
+<script>
+    var landing = angular.module('landing', ['ngMaterial', 'ngSanitize','angular-jwt',]);
+    landing.controller('landingHomeController', ['$scope', '$rootScope', '$location', '$filter', '$http','$mdToast','SessionService','gaService_callType',
+        function ($scope, $rootScope, $location, $filter, $http,$mdToast,SessionService,gaService_callType) {
+
+            $scope.signInUser = function () {
+                if (checkForEmailorMobile() == "mobile") {
+                    var sessionObj = {
+                        type: constants.USER_TYPE_USER
+                    };
+                    sessionHelper.create(sessionObj, getCurrTime());
+                    var userSession = lsGet(constants.SESSION);
+                    verifyMobile(function () {
+                        var passHash = CryptoJS.MD5($scope.user.password);
+                        var osInfo = detectOs();
+                        var os = osInfo.os.toLowerCase();
+                        var loginCredentials = {
+                            mobile: $scope.user.mobile,
+                            password: passHash.toString(CryptoJS.enc.Hex),
+                            source: 'web',
+                            referrer: window.document.referrer,
+                            sessionData: {
+                                type: constants.USER_TYPE_USER,
+                                startTime: new Date(),
+                                activationTime: userSession.activationTime,
+                                metaInfo: userSession.metaInfo
+                            }
+                        };
+                        if (osInfo.hasOwnProperty('os') && (os.indexOf('android') > -1 || os.indexOf('ios') > -1)) {
+                            loginCredentials.source = 'mobileWeb';
+                        }
+                        $http.post('/user/signin', loginCredentials).then(function successCallback(result) {
+                            var data = result.data;
+                            var message = data.message;
+                            if (message === constants.MESSAGE_SUCCESS) {
+                                gaService_callType.gaSignIn();
+                                var userObject = data.object;
+                                userObject.isLoggedIn = true;
+                                lsSet(constants.USER_DETAILS, userObject);
+                                var sessionObj = {
+                                    id: userObject.id,
+                                    type: constants.USER_TYPE_USER
+                                };
+                                sessionHelper.create(sessionObj, getCurrTime());
+                                $rootScope.loggedInUser = userObject;
+                                var userSession = lsGet(constants.SESSION);
+                                var sessionData = {
+                                    id: userSession.id,
+                                    type: constants.USER_TYPE_USER,
+                                    startTime: new Date(),
+                                    activationTime: userSession.activationTime,
+                                    metaInfo: userSession.metaInfo
+                                };
+                                $http.post('/db/session/create', sessionData).then(function successCallback(result) {
+                                    var data = result.data;
+                                    var message = data.message;
+                                    if (result.data.message === constants.MESSAGE_SUCCESS) {
+                                        window.location.href = "/myRedirect"
+                                    } else {
+                                        lsSet(constants.USER_DETAILS,{isLoggedIn : false, email : $scope.user.email});
+                                        window.location.href = "/patient#/signin"
+                                    }
+                                }, function errorCallback(response) {
+                                });
+                            } else if (message === constants.PASSWORD_MISMATCH) {
+                                alert("Wrong Password, Please Try Again");
+                                $mdToast.show(
+                                    $mdToast.simple()
+                                        .textContent('Wrong Password, Please Try Again')
+                                );
+                            } else if (message === constants.MESSAGE_ERROR) {
+                                alert("Server Error! Sorry for the inconvenience");
+                                $mdToast.show(
+                                    $mdToast.simple()
+                                        .textContent('Server Error! Sorry for the inconvenience')
+                                );
+                            } else if (message === constants.EMAIL_NOT_EXISTS) {
+                                alert("Check your mobile number and password");
+                                $mdToast.show(
+                                    $mdToast.simple()
+                                        .textContent('Check your mobile number and password')
+                                );
+                            } else {
+                                alert("Please enter a valid mobile number or Email Id");
+                                $mdToast.show(
+                                    $mdToast.simple()
+                                        .textContent('Error occurred')
+                                );
+                            }
+                        }, function errorCallback(response) {
+                        });
+                    });
+                }
+                else if(checkForEmailorMobile() == "email"){
+                    var sessionObj = {
+                        type: constants.USER_TYPE_USER
+                    };
+                    sessionHelper.create(sessionObj, getCurrTime());
+                    var userSession = lsGet(constants.SESSION);
+                    var passHash = CryptoJS.MD5($scope.user.password);
+                    var loginCredentials = {
+                        email: $scope.user.email,
+                        password: passHash.toString(CryptoJS.enc.Hex),
+                        sessionData: {
+                            type: constants.USER_TYPE_USER,
+                            startTime: new Date(),
+                            activationTime: userSession.activationTime,
+                            metaInfo: userSession.metaInfo
+                        }
+                    };
+                    $http.post('/user/signin', loginCredentials).then(function successCallback(result) {
+                        var data = result.data;
+                        var message = data.message;
+                        if (message === constants.MESSAGE_SUCCESS) {
+                            gaService_callType.gaSignIn();
+                            var userObject = data.object;
+                            userObject.isLoggedIn = true;
+                            lsSet(constants.USER_DETAILS, userObject);
+                            lsSet("userLang",{lang : 'en'});
+                            var sessionObj = {
+                                id: userObject.id,
+                                type: constants.USER_TYPE_USER
+                            };
+                            sessionHelper.create(sessionObj, getCurrTime());
+                            $rootScope.loggedInUser = userObject;
+                            var userSession = lsGet(constants.SESSION);
+                            var sessionData = {
+                                id: userSession.id,
+                                type: constants.USER_TYPE_USER,
+                                startTime: new Date(),
+                                activationTime: userSession.activationTime,
+                                metaInfo: userSession.metaInfo
+                            };
+                            $http.post('/db/session/create', sessionData).then(function successCallback(response) {
+                                if (response.data.message === constants.MESSAGE_SUCCESS) {
+                                    lsSet("userLang",{lang : 'en'});
+                                    window.location.href = "/myRedirect"
+                                } else {
+                                    lsSet(constants.USER_DETAILS,{isLoggedIn : false, email : $scope.user.email});
+                                    window.location.href = "/patient#/signin"
+                                }
+                            }, function errorCallback(response) {
+                            });
+                        } else if (message === constants.PASSWORD_MISMATCH) {
+                            alert("Wrong Password, Please Try Again");
+                            $mdToast.show(
+                                $mdToast.simple()
+                                    .textContent('Wrong Password, Please Try Again')
+                            );
+                        } else if (message === constants.MESSAGE_ERROR) {
+                            alert("Server Error! Sorry for the inconvenience");
+                            $mdToast.show(
+                                $mdToast.simple()
+                                    .textContent('Server Error! Sorry for the inconvenience')
+                            );
+                        } else if (message === constants.EMAIL_NOT_EXISTS) {
+                            alert("Check your mobile number and password");
+                            $mdToast.show(
+                                $mdToast.simple()
+                                    .textContent('Check your email and password')
+                            );
+                        } else {
+                            alert("Error occurred");
+                            $mdToast.show(
+                                $mdToast.simple()
+                                    .textContent('Error occurred')
+                            );
+                        }
+                    }, function errorCallback(response) {
+                    });
+                }
+                else{
+                    alert("Please enter a valid mobile number or Email Id");
+                    $mdToast.show(
+                        $mdToast.simple()
+                            .textContent('Please enter a valid mobile number or Email Id')
+                    );
+                }
+            };
+
+            var verifyMobile = function (callback) {
+                $scope.user.countryCode = '+60';
+                if ($scope.user.countryCode) {
+                    if ($scope.user.mobile && $scope.user.mobile.length >= 7) {
+                        while($scope.user.mobile[0] == "0" || ($scope.user.mobile[0]+$scope.user.mobile[1]+$scope.user.mobile[2] == "+60" || $scope.user.mobile[0]+$scope.user.mobile[1] == "60")){
+                            if($scope.user.mobile[0] == "0"){
+                                $scope.user.mobile = $scope.user.mobile.substr(1);
+                            }else if($scope.user.mobile[0]+$scope.user.mobile[1]+$scope.user.mobile[2] == "+60"){
+                                $scope.user.mobile = $scope.user.mobile.split('+60')[1];
+                            }else if($scope.user.mobile[0]+$scope.user.mobile[1] == "60"){
+                                $scope.user.mobile = $scope.user.mobile.split('60')[1];
+                            }
+                        };
+                        var postData = {
+                            mobile: $scope.user.mobile,
+                            countryCode: $scope.user.countryCode
+                        };
+                        $http.post('/user/status', postData).then(function successCallback(result) {
+                            var data = result.data;
+                            var message = data.message;
+                            if (message === constants.MESSAGE_SUCCESS) {
+                                var userObject = data.object;
+                                var userStatus = userObject.status;
+                                if (userStatus == constants.MESSAGE_VERIFIED) {
+                                    $scope.showPassword = true;
+                                    callback();
+                                } else {
+                                    ngToast.create({
+                                        className: 'ngNotification',
+                                        content: 'Please complete your singup process'
+                                    });
+                                    lsSet(constants.USER_DETAILS, userObject);
+                                    $location.path('/otp');
+                                }
+                            } else if (message == constants.MESSAGE_ERROR) {
+                                $scope.showPassword = false;
+                                alert("Your mobile number does not exist, Please Try Again or Click Register");
+                                // ngToast.create({
+                                //     className: 'ngNotification',
+                                //     content: 'Your mobile number does not exist, Please Try Again or Click Register'
+                                // });
+                            }
+                        }, function errorCallback(response) {
+                        });
+                    }
+                } else {
+                    ngToast.create({
+                        className: 'ngNotification',
+                        content: 'Please provide a Country Code'
+                    });
+                }
+            };
+
+            var checkForEmailorMobile = function(){
+                var intRegex = /[0-9 -()+]+$/;
+                var  emailReg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+                if(($scope.user.emailOrMobile.length > 6 && $scope.user.emailOrMobile.length <15) && (intRegex.test($scope.user.emailOrMobile))){
+                    $scope.user.mobile = $scope.user.emailOrMobile;
+                    return "mobile";
+                }
+                else if(($scope.user.emailOrMobile.length > 4) && (emailReg.test($scope.user.emailOrMobile))){
+                    $scope.user.email = $scope.user.emailOrMobile;
+                    return "email";
+                }
+                else{
+                    return null;
+                }
+            };
+    }]);
+    landing.service('SessionService', function () {
+
+        var user = lsGet('adminUser');
+
+        this.setUser = function (newUser) {
+            lsSet('adminUser', newUser);
+            user = newUser;
+        };
+
+        this.getUser = function () {
+            return user;
+        };
+    });
+    landing.service('gaService_callType',function(){
+        this.gaSignUp = function () {
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-80312661-1', 'auto');
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Auth',
+                eventAction: 'signup'
+            });
+        }
+
+        this.gaSignIn = function () {
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-80312661-1', 'auto');
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Auth',
+                eventAction: 'signIn'
+            });
+        }
+
+        this.gaOauthSignIn = function () {
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-80312661-1', 'auto');
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Auth',
+                eventAction: 'oauthSignIn'
+            });
+        }
+        this.pageTrack = function () {
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-80312661-1', 'auto');
+            ga('set', 'page', '/calltype');
+            ga('send', 'pageview');
+        }
+    });
+</script>
 </html>
