@@ -114,7 +114,9 @@ header a {
 	color: #E22;
 	opacity: 0.8;
 }
-
+.header-pn{
+	width:100%;
+}
 .header-phone {
 	align-items: center;
 	display: flex;
@@ -289,12 +291,12 @@ header a {
 }
 
 .slide-description .title {
-	font-size: 3.5vw;
+	font-size: 20px;
 	font-weight: 700;
 }
 
 .slide-description .sub-title {
-	font-size: 2vw;
+	font-size: 16px;
 }
 
 /* -------------------------------------------------------- autoplay slide */
@@ -365,7 +367,7 @@ header a {
 	}
 
 	.slide-description .title {
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: 800;
 	}
 	.slider {
@@ -430,58 +432,12 @@ header a {
 	transition: none;
 }
 }
-/* -------------------------------------------------------- autoplay dot */
-.slider > .slider-dot {
-	position: relative;
-	margin-top: -4vw;
-	text-align: center;
-	z-index: 300;
-	font-size: 0;
-}
-.slider > .slider-dot > label {
-	position: relative;
-	display: inline-block;
-	margin: 12vw0.5vw;
-	width: 10vw;
-	height: 12vw;
-	border-radius: 50%;
 
-	background-color: #FFF;
-}
-.slider > #input-slide-0:checked ~ .slider-dot > label.slide-00,
-.slider > #input-slide-1:checked ~ .slider-dot > label.slide-01,
-.slider > #input-slide-2:checked ~ .slider-dot > label.slide-02,
-.slider > #input-slide-3:checked ~ .slider-dot > label.slide-03 {
-	background-color: #FD7FE3;
-}
-.slider > .slider-dot > label:hover{
-	background-color: #7E6DE0;
-}
-@keyframes dot {
-	0%, 24%	{ background-color: #e72; }
-	25%, 100% { background: #FFF; }
-}
-.slider > #input-slide-autoplay:checked ~ .slider-dot > label.slide-00{
-	
-	animation: dot 32000ms infinite -2000ms;	
-}
-.slider > #input-slide-autoplay:checked ~ .slider-dot > label.slide-01{
-	
-	animation: dot 32000ms infinite 6000ms;	
-}
-.slider > #input-slide-autoplay:checked ~ .slider-dot > label.slide-02{
-	
-	animation: dot 32000ms infinite 14000ms;	
-}
-.slider > #input-slide-autoplay:checked ~ .slider-dot > label.slide-03{
-	
-	animation: dot 32000ms infinite 22000ms;	
-}
 
 /*-----------------------4. contact------------------------------*/
 
 .banner-desc {
-	color: white;
+	color: #fff;
 	display: block;
 	font-size: 16px;
 	margin: 5px;
@@ -527,7 +483,7 @@ header a {
 	font-family: helvetica;
 	justify-content: flex-start;
 	margin: 0;
-	padding: 2% 0 2% 13%;
+	padding: 2% 0 2% 20%;
 }
 .contact-banner-container{
 	display: flex;
@@ -551,11 +507,12 @@ header a {
 	}
 
 	.banner-desc {
-		font-size: 3vw;
+		font-size: 12px;
+		color:#fff;
 	}
 
 	.banner-title {
-		font-size: 3vw;
+		font-size: 14px;
 		
 	}
 
@@ -608,7 +565,7 @@ header a {
 }
 
 .faq-container ol li {
-	
+	padding: 0;
 	font-size:14px;
 	font-weight: 600;
 	color: #E72;
@@ -628,7 +585,8 @@ header a {
 @media screen and (max-width: 576px) {
 	.faq-container ol {
 		font-size: 12px;
-		color: #e72;
+    	color: #e72;
+    	margin-left: -16px;
 	}
 
 	.faq-answers {
@@ -697,7 +655,7 @@ header a {
 
 /*--end  checkbox--*/
 .login {
-	background-color: #eee;
+	background-color: #f5f5f5;
 	margin-top: 20px;
 }
 
@@ -905,6 +863,9 @@ header a {
 	.service-btn{
 		margin:16px auto;
 	}
+	.service-container h2 {
+	font-size: 18px;
+}
 }
 
 @media only screen and (max-width: 576px) {
