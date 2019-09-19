@@ -1,5 +1,5 @@
 /*-----------------------directory------------------------------
---v1.1--
+--v1.9.1--
 
 global
 1. header
@@ -291,12 +291,12 @@ header a {
 }
 
 .slide-description .title {
-	font-size: 20px;
+	font-size: 45px;
 	font-weight: 700;
 }
 
 .slide-description .sub-title {
-	font-size: 16px;
+	font-size: 20px;
 }
 
 /* -------------------------------------------------------- autoplay slide */
@@ -367,14 +367,14 @@ header a {
 	}
 
 	.slide-description .title {
-		font-size: 16px;
-		font-weight: 800;
+		font-size: 18px;
+		font-weight: 600;
 	}
 	.slider {
 		min-height:220px;
 	}
 	.slide-description .sub-title {
-		font-size: 12px;
+		font-size: 15px;
 	}
 	
 	.slider > ul > li {
@@ -436,13 +436,14 @@ header a {
 
 /*-----------------------4. contact------------------------------*/
 
-.banner-desc {
+.banner-textarea .banner-desc {
 	color: #fff;
 	display: block;
 	font-size: 16px;
 	margin: 5px;
 	padding: 0;
 }
+
 
 .banner-emel {
 	border-left: 1px #fff solid;
