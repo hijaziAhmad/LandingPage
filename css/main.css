@@ -1,5 +1,5 @@
 /*-----------------------directory------------------------------
---v1.9.5--
+--v1.9.6--
 
 global
 1. header
@@ -781,8 +781,7 @@ header a {
 }
 .medicine-textarea .symp-med-btn{
 	color: #fff;
-	padding: 5px 10px;
-	font-size:12px;
+	padding: 10px 20px;
 }
 
 
