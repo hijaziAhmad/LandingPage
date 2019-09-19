@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="landing">
-<!--v1.9.1-->
+<!--v1.9.2-->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -33,7 +33,12 @@
 		function gtag() {
 			dataLayer.push(arguments)
 		}
-		window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "UA-80312661-1")
+		window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "UA-80312661-1");
+		function gohere(a) {
+  		var elmnt = document.getElementById(a);
+  		elmnt.scrollIntoView();
+		}
+
 	</script>
 	<script>
         (function (i, s, o, g, r, a, m) {
@@ -71,25 +76,25 @@
 
 
 		<div class="desktop-links">
-			<a target="_self" href="#services">Health Services</a>
-			<a target="_self" href="#symptoms">Top Conditions</a>
-			<a target="_self" href="#medicine">Top Medicines</a>
-			<a target="_self" href="#faq">FAQs |</a>
+			<a target="_self" href="#services" onclick="gohere('services')">Health Services</a>
+			<a target="_self" href="#symptoms" onclick="gohere('symptoms')">Top Conditions</a>
+			<a target="_self" href="#medicine" onclick="gohere('medicine')">Top Medicines</a>
+			<a target="_self" href="#faq" onclick="gohere('faq')">FAQs |</a>
 			<a target="_self" href="/greateasterntakaful"><img src="/landingPage/img/malaysia-flag-icon-32.png" alt="Malaysia Flag" class="flag"> BM</a>
-			<a href="#login" class="header-btn">Sign In</a>
+			<a href="#login" class="header-btn" onclick="gohere('header-btn')">Sign In</a>
 		</div>
 
-	<!--	<div class="mobile-links">
+	<div class="mobile-links">
 			<a href="#">
 				<img src="/landingPage/img/icons8-menu-48.png" alt="menu icon for mobile">
 			</a>
 			<div class="drop-downlist">
-				<a target="_self" href="#services">Health Services</a>
-				<a target="_self" href="#symptoms">Top Conditions</a>
-				<a target="_self" href="#medicine">Top Medicines</a>
-				<a target="_self" href="#faq">FAQ</a>
+				<a target="_self" href="#services" onclick="gohere('services')">Health Services</a>
+				<a target="_self" href="#symptoms" onclick="gohere('symptoms')">Top Conditions</a>
+				<a target="_self" href="#medicine" onclick="gohere('medicine')">Top Medicines</a>
+				<a target="_self" href="#faq" onclick="gohere('faq')">FAQ</a>
 			</div>
-		</div>-->
+		</div>
 
 	</header>
 		<a href="https://www.greateasterntakaful.com/en/takaful-solutions/promotion-and-events/2019/harapan-trio.html"><!-- change website -->
@@ -175,7 +180,7 @@
 						<div class="service-textarea">
 							<p class="service-title">Speak To A Doctor</p>
 							<p class="service-desc">Consult with our doctor anytime, anywhere via chat, phone or video call.</p>
-							<a href="#login" class="service-btn">Sign In</a>
+							<a onclick="gohere('login')" class="service-btn">Sign In</a>
 						</div>
 
 					</div>
@@ -463,10 +468,10 @@
 	
 	<footer>
 		<a href="https://www.doctoroncall.com.my/termsOfService">Terms and Conditions</a>
-			<a target="_self" href="#services">Health Services</a>
-			<a target="_self" href="#symptoms">Top Conditions</a>
-			<a target="_self" href="#medicine">Top Medicines</a>
-			<a target="_self" href="#faq">FAQs </a>
+			<a target="_self" href="#services" onclick="gohere('services')">Health Services</a>
+			<a target="_self" href="#symptoms" onclick="gohere('symptoms')">Top Conditions</a>
+			<a target="_self" href="#medicine" onclick="gohere('medicine')">Top Medicines</a>
+			<a target="_self" href="#faq" onclick="gohere('faq')">FAQs </a>
 		<a href="/greateasterntakaful"><img src="/landingPage/img/malaysia-flag-icon-32.png" alt="Malaysia Flag" class="flag"> BM</a>
 	</footer>
 </body>

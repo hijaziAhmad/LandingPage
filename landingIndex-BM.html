@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ms" ng-app="landing">
-<!--v1.9.1-->
+<!--v1.9.2-->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -33,7 +33,11 @@
 		function gtag() {
 			dataLayer.push(arguments)
 		}
-		window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "UA-80312661-1")
+		window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "UA-80312661-1");
+		function gohere(a) {
+  		var elmnt = document.getElementById(a);
+  		elmnt.scrollIntoView();
+		}
 
 	</script>
 	<script>
@@ -71,12 +75,12 @@
 			</div>
 		</div>
 	<div class="desktop-links">
-			<a target="_self" href="#services">Perkhidmatan Kesihatan</a>
-			<a target="_self" href="#symptoms">Masalah Kesihatan</a>
-			<a target="_self" href="#medicine">Ubat Popular</a>
-			<a target="_self" href="#faq">Soalan |</a>
+			<a target="_self" href="#services" onclick="gohere('services')">Perkhidmatan Kesihatan</a>
+			<a target="_self" href="#symptoms" onclick="gohere('symptoms')">Masalah Kesihatan</a>
+			<a target="_self" href="#medicine" onclick="gohere('medicine')">Ubat Popular</a>
+			<a target="_self" href="#faq" onclick="gohere('faq')">Soalan |</a>
 			<a target="_self" href="./greateasterntakaful/en"><img src="/landingPage/img/malaysia-flag-icon-32.png" alt="Malaysia Flag" class="flag"> EN</a>
-			<a href="#login" class="header-btn">Log Masuk</a>
+			<a href="#login" class="header-btn" onclick="gohere('login')">Log Masuk</a>
 		</div>
 
 		<!--<div class="mobile-links">
@@ -176,7 +180,7 @@
 						<div class="service-textarea">
 							<p class="service-title">Rundingan Doktor</p>
 							<p class="service-desc">Dapatkan rundingan doktor kami pada bila-bila masa, atau di mana jua anda berada melalui mesej, panggilan telefon atau video.</p>
-							<a href="#login" class="service-btn">Log Masuk</a>
+							<a  class="service-btn" onclick="gohere('login')">Log Masuk</a>
 						</div>
 
 					</div>
@@ -470,10 +474,10 @@
 	
 	<footer>
 		<a href="https://www.doctoroncall.com.my/termsOfService">Terma dan Syarat</a>
-		<a  href="#services">Perkhidmatan Kesihatan</a>
-		<a  href="#symptoms">Masalah Kesihatan</a>
-		<a  href="#medicine">Ubat Popular</a>
-		<a href="#faq">Soalan Lazim </a>
+		<a  href="#services" onclick="gohere('services')">Perkhidmatan Kesihatan</a>
+		<a  href="#symptoms" onclick="gohere('symptoms')">Masalah Kesihatan</a>
+		<a  href="#medicine" onclick="gohere('medicine')">Ubat Popular</a>
+		<a href="#faq" onclick="gohere('faq')">Soalan Lazim </a>
 		<a href="./greateasterntakaful/en"><img src="/landingPage/img/malaysia-flag-icon-32.png" alt="Malaysia Flag" class="flag"> EN</a>
 	</footer>
 </body>
