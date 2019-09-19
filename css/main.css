@@ -1,5 +1,5 @@
 /*-----------------------directory------------------------------
---v1.9.3--
+--v1.9.4--
 
 global
 1. header
@@ -18,7 +18,6 @@ global
 a {
 	/*remove anchor tag preset style*/
 	text-decoration: none;
-	cursor:pointer;
 }
 
 html,
@@ -639,7 +638,8 @@ header a {
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	display: inline-block;
-	font-size: 12px;
+	font-size: 12px;	
+	height:17px;
 	line-height: 17px;
 	margin: 15px;
 	padding-left: 22px;
@@ -713,6 +713,11 @@ header a {
 	.login-img img {
 		display: none;
 	}
+}
+@media (max-width:576px){
+	.login-btn {
+		margin-top:30px;	
+}
 }
 
 /*-----------------------7. medicine------------------------------*/
